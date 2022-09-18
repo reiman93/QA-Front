@@ -1,11 +1,13 @@
 $(function appJQuery() {
 	"use strict";
-	//	new PerfectScrollbar(".header-message-list"),
-	//	new PerfectScrollbar(".header-notifications-list"),
-	$(".mobile-search-icon").on("click", function () {
-		$(".search-bar").addClass("full-search-bar")
+	new PerfectScrollbar(".header-message-list"),
+    new PerfectScrollbar(".header-notifications-list"),
 
-	}),
+		$(".mobile-search-icon").on("click", function () {
+			console.warn("se esta ejecutando esta mierda de click mobile!!!")
+			$(".search-bar").addClass("full-search-bar")
+
+		}),
 
 		$(".search-close").on("click", function () {
 			$(".search-bar").removeClass("full-search-bar")
@@ -13,6 +15,7 @@ $(function appJQuery() {
 
 
 		$(".mobile-toggle-menu").on("click", function () {
+			console.warn("esta mierda no esta entrando aki")
 			$(".wrapper").addClass("toggled")
 		}), $(".toggle-icon").click(function () {
 			$(".wrapper").hasClass("toggled") ? ($(".wrapper").removeClass("toggled"), $(".sidebar-wrapper").unbind("hover")) : ($(".wrapper").addClass("toggled"), $(".sidebar-wrapper").hover(function () {
@@ -150,4 +153,7 @@ $(function appJQuery() {
 	function theme15() {
 		$('body').attr('class', 'bg-theme bg-theme15');
 	}
+
+
+
 });
